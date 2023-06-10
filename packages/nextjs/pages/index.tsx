@@ -23,8 +23,8 @@ const Home: NextPage = () => {
         <div className="px-5 md:w-1/2">
           <p className="text-center text-lg">
             We have also created a subgraph so that you can fetch the accounts which have collected this token easily.
-            You can find the relevant code in the <b>components/Subgraph.tsx</b> file. Notice how we use to specific
-            kinds of <b>Transfer</b> events to determine which accounts minted NFTs...
+            You can find the relevant code in the <b>components/Subgraph.tsx</b> file. Notice how we use specific kinds
+            of <b>Transfer</b> events to determine which accounts minted NFTs...
           </p>
           <Subgraph />
         </div>
