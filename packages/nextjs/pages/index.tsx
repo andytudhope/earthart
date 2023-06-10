@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { NextPage } from "next";
 import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
+import Subgraph from "~~/components/Subgraph";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,15 @@ const Home: NextPage = () => {
             We create regenerative art that funds reforestation on Lamu Island, Kenya.
           </p>
           <Image alt="Shela Sand Dunes" width={800} height={400} src="/dunes.jpg" />
+        </div>
+
+        <div className="px-5 md:w-1/2">
+          <p className="text-center text-lg">
+            We have also created a subgraph so that you can fetch the accounts which have collected this token easily.
+            You can find the relevant code in the <b>components/Subgraph.tsx</b> file. Notice how we use to specific
+            kinds of <b>Transfer</b> events to determine which accounts minted NFTs...
+          </p>
+          <Subgraph />
         </div>
 
         <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">

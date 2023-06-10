@@ -65,10 +65,16 @@ This command deploys a test smart contract to the local network. The contract is
 yarn start
 ```
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the contract component or the example ui in the frontend. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+Visit your app on: `http://localhost:3000`. We have also included a subgraph in this repo, and implemented an example component to illustrate how to use it to fetch data about which accounts have minted NFTs. All the relevant code is in in `packages/subgraph` and `packages/nextjs/components/Subgraph.tsx`.
 
-In particular, we encourage you to go to the `debug` tab to interact with your contract, see all the functions, and begin to understand how they work. 
+### Further Pointers
 
-You can open minting by taing the private key in `packages/hardhat/hardhat.config.ts` at L12, importing it into MetaMask, connecting to that account (rather than a burner wallet) and scrolling down to the `Write` section, where you will find the `openMinting` function. Have fun playing around with everything else you find there.
+In order to implement the subgraph, we have pointed SE2 at the Goerli test network. 
+
+We encourage you to tweak the app config in `packages/nextjs/scaffold.config.ts` and set `targetNetwork: chains.hardhat` so you can play with the contract and learn locally. In particular, this will make the Block Explorer tab work again, which is a lot of fun to watch.
+
+We also encourage you to go to the `debug` tab to interact with your contract, see all the functions, and begin to understand how they work. 
+
+You can open minting on your local contract by taking the private key in `packages/hardhat/hardhat.config.ts` at L12, importing it into MetaMask, connecting to that account (rather than a burner wallet) and scrolling down to the `Write` section, where you will find the `openMinting` function. Have fun playing around with everything else you find there.
 
 If you learn from videos better than you do from text, we recommend you sit back, relax, and enjoy [Austin explaining everything here](https://youtu.be/98gMdk5oWmc). Austin will give a great sense of how to begin messing around with this contract and getting it into a state where it has everything you need and nothing you don't.
