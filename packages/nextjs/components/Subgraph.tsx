@@ -31,7 +31,10 @@ const Subgraph: React.FC = () => {
         );
 
         const data = response.data.data;
-        const fetchedCollectors: Collector[] = data.transfers;
+        const fetchedCollectors: Collector[] = data.transfers.map((collector: Collector) => ({
+          ...collector,
+          id: collector.id.slice(0, -8), // Remove last 8 characters from id
+        }));
 
         setCollectors(fetchedCollectors);
       } catch (error) {
