@@ -1,0 +1,14 @@
+{
+  "goerli": {
+    "AetherEarthArt": {
+      "address": "0x1D0310DCCADe791a3139e2E54394932e62A25191",
+      "startBlock": 9109633
+    }
+  },
+  "optimism": {
+    "AetherEarthArt": {
+      "address": "0x76F9A1CeC319C7123746Efef068769588299e637",
+      "startBlock": 105409954
+    }
+  }
+}
