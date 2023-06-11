@@ -69,7 +69,7 @@ Visit your app on: `http://localhost:3000`. We have also included a subgraph in 
 
 ### Further Pointers
 
-In order to implement the subgraph, we have pointed SE2 at the Goerli test network. 
+In order to implement the subgraph, we have pointed SE2 at the Optimism network. 
 
 We encourage you to tweak the app config in `packages/nextjs/scaffold.config.ts` and set `targetNetwork: chains.hardhat` so you can play with the contract and learn locally. In particular, this will make the Block Explorer tab work again, which is a lot of fun to watch.
 

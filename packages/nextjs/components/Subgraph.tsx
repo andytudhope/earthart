@@ -15,8 +15,10 @@ const Subgraph: React.FC = () => {
   useEffect(() => {
     const fetchCollectors = async () => {
       try {
-        const response = await axios.post("https://api.studio.thegraph.com/query/24825/aether-goerli/version/latest", {
-          query: `
+        const response = await axios.post(
+          "https://api.studio.thegraph.com/query/24825/aether-optimism/version/latest",
+          {
+            query: `
               query {
                 transfers(where: { from: "0x0000000000000000000000000000000000000000" }) {
                   id
@@ -25,7 +27,8 @@ const Subgraph: React.FC = () => {
                 }
               }
             `,
-        });
+          },
+        );
 
         const data = response.data.data;
         const fetchedCollectors: Collector[] = data.transfers;
