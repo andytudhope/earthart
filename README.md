@@ -71,6 +71,10 @@ Visit your app on: `http://localhost:3000`. We have also included a subgraph in 
 
 In order to implement the subgraph, we have pointed SE2 at the Optimism network. 
 
+Our contract is deployed at [0x76F9A1CeC319C7123746Efef068769588299e637](https://optimistic.etherscan.io/address/0x76F9A1CeC319C7123746Efef068769588299e637).
+
+Our subgraph can be found [here](https://api.studio.thegraph.com/proxy/24825/aether-optimism/0.0.1/graphql?query=query+%7B%0A++transfers%28where%3A+%7B+from%3A+%220x0000000000000000000000000000000000000000%22+%7D%29+%7B%0A++++id%0A++++to%0A++++tokenId%0A++%7D%0A%7D).
+
 We encourage you to tweak the app config in `packages/nextjs/scaffold.config.ts` and set `targetNetwork: chains.hardhat` so you can play with the contract and learn locally. In particular, this will make the Block Explorer tab work again, which is a lot of fun to watch.
 
 We also encourage you to go to the `debug` tab to interact with your contract, see all the functions, and begin to understand how they work. 
